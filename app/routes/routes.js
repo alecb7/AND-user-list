@@ -7,10 +7,6 @@ var ObjectID = require('mongodb').ObjectID;
 module.exports = function(app, db) {
     app.get('/users', (req, res) => {
         // // Request to get all users here
-        // db.collection("pre-buildweek").find({}, function(err, result) {
-        //     if (err) throw err;
-        //     console.log(result);
-        //   });
 
           db.collection("pre-buildweek").find({}).toArray(function(err, result) {
             if (err) throw err;
@@ -21,7 +17,9 @@ module.exports = function(app, db) {
 
     app.get('/user/:id', (req, res) => {
         // Get user by id - req.params.id
-        db.collection('pre-buildweek').findOne({ userid : req.params.id }, (err, item) => {
+        var o_id = new ObjectID(req.params.id);
+        let idQuery = {'_id': o_id};
+        db.collection('pre-buildweek').findOne(idQuery, (err, item) => {
             console.log(item);
             if (err) {
                 res.send({'error':'An error has occurred'});
