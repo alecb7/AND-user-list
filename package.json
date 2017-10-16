@@ -6,7 +6,7 @@
   "scripts": {
     "test:ci": "karma start karma.config.js --single-run",
     "test": "karma start karma.config.js ",
-    "start": "webpack && 'node server.js'",
+    "start": "webpack",
     "server": "node server.js"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jquery": "^3.2.1",
     "karma": "^1.6.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",

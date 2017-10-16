@@ -2,17 +2,18 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="profileLook.css">
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./user.js"></script>
     <h2> Profile  </h2>
 
 </head>
- 
+
 <body>
 
 	<div>
-		<button type="button" onclick="window.location.href=''""> Back </button>
+		<button type="button" id="back"> Back </button>
 	</div>
-   
+
     <div class="container">
                 <div class="row">
                     <div class="col-xs-4 col-xs-offset-4">
@@ -25,27 +26,27 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-4 col-xs-offset-4 text-left">
+                    <div class="col-xs-4 col-xs-offset-4 text-left" id="userProfile">
                         <div class=" col-xs-6 tital">First Name:</div>
-                        <div class=" col-xs-6 ">first name</div>
+                        <div class=" col-xs-6 " id="firstName"></div>
                         <div class="clearfix"></div>
                         <div class="bot-border"></div>
 
                         <div class="col-xs-6 tital ">Last Name:</div>
-                        <div class="col-xs-6">last name </div>
+                        <div class="col-xs-6" id="lastName"> </div>
                         <div class="clearfix"></div>
                         <div class="bot-border"></div>
 
                         <div class="col-xs-6 tital ">Age:</div>
-                        <div class="col-xs-6"> age</div>
+                        <div class="col-xs-6" id="age"></div>
                         <div class="clearfix"></div>
                         <div class="bot-border"></div>
 
                         <div class="col-xs-6 tital ">Nationality:</div>
-                        <div class="col-xs-6">nationality</div>
+                        <div class="col-xs-6" id="nationality"></div>
                         <div class="clearfix"></div>
                         <div class="bot-border"></div>
                     </div>
-                </div>    
+                </div>
     </div>
 </body>
