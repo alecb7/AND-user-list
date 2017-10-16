@@ -1,0 +1,14 @@
+.users 
+{
+	list-style-type: none; 
+	background-color: #EEE;
+	border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+li 
+{
+	padding-top: : 0.25em;
+	padding-bottom: 0.5em;
+    margin: 0.25em;
+}
