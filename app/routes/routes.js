@@ -16,18 +16,32 @@ module.exports = function(app, db) {
     });
 
     app.get('/user/:id', (req, res) => {
-        // Get user by id - req.params.id
-        var o_id = new ObjectID(req.params.id);
-        let idQuery = {'_id': o_id};
-        db.collection('pre-buildweek').findOne(idQuery, (err, item) => {
-            console.log(item);
+        // // Get user by id - req.params.id
+        // var o_id = new ObjectID(req.params.id);
+        // let idQuery = {'_id': o_id};
+        // db.collection('pre-buildweek').findOne(idQuery, (err, item) => {
+        //     if (err) {
+        //         es.sendFile(path.join(__dirname, '../../src/404.html'))
+        //     } else {
+        //         res.send(item);
+        //     }
+        // });
+        // // res.json(mockUsers.find(u => u.id === req.params.id))
+
+        let id = parseInt(req.params.id);
+        db.collection('pre-buildweek').findOne({ userid : id }, (err, result) => {
             if (err) {
-                res.send({'error':'An error has occurred'});
+                console.log(err);
+                res.sendStatus(500);
+            } else if (!result) {
+                console.log('Nothing found!');
+                res.sendStatus(404);
+                return;
             } else {
-                res.send(item);
+                console.log(result);
+                res.send(result);
             }
         });
-        // res.json(mockUsers.find(u => u.id === req.params.id))
     });
 
     app.get('/', (req, res) => {
