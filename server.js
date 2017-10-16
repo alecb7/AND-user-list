@@ -38,6 +38,7 @@ let mockData = [
 const port = 8080;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('src'))
 
 const setUpDummyData = false;
 
