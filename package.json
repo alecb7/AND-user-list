@@ -4,7 +4,7 @@
   "description": "Simple set of users",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "server": "mongod && node server.js"
   },
   "repository": {
