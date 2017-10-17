@@ -40,7 +40,7 @@ const port = 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'))
 
-const setUpDummyData = false;
+const setUpDummyData = true;
 
 MongoClient.connect(db.url, (err, database) => {
     if (err) return console.log(err)
