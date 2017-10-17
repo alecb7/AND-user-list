@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Akallabet/AND-user-list#readme",
   "devDependencies": {
     "jest": "^21.2.1"
+
   },
   "dependencies": {
     "mongodb": "2.2.33",
