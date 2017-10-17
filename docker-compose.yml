@@ -1,0 +1,29 @@
+version: '2'
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile.api
+    ports:
+     - "8081:8080"
+    volumes:
+     - .:/var/app/user-list-app-foo
+    links:
+     - db:mongo
+    command: npm run dev
+  db:
+    image: mongo
+    ports:
+     - "27017:27017"
+
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile.web
+    volumes:
+      - .:/var/app/user-list-app-foo
+    ports:
+     - "8080:8080"
+    links:
+     - db:mongo
+

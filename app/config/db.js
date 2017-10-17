@@ -1,3 +1,3 @@
 module.exports = {
-    url: 'mongodb://mongo:27017/pre-buildweek',
+  url: "mongodb://mongo:27017/pre-buildweek"
 };
