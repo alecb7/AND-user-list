@@ -2,7 +2,6 @@
 (function() {
   $.get("/users", function( users ) {
     const userList = document.getElementById('userList')
-    console.log(users);
     users.forEach(({_id, userid, nat, firstName, lastName}) => {
       const li = document.createElement('li')
       const a = document.createElement('a')

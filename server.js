@@ -6,28 +6,28 @@ const db             = require('./app/config/db');
 
 let mockData = [
     {
-        userid: 01,
+        userid: 1,
         firstName: "Olly",
         lastName: "Nural",
         age: "21",
         nat: "British"
     },
     {
-        userid: 02,
+        userid: 2,
         firstName: "Graziano",
         lastName: "Statello",
         age: "30",
         nat: "Italian"
     },
     {
-        userid: 03,
+        userid: 3,
         firstName: "Jasmien",
         lastName: "Cels",
         age: "20",
         nat: "some"
     },
     {
-        userid: 04,
+        userid: 4,
         firstName: "Mickell",
         lastName: "Crawford",
         age: "24",
@@ -70,5 +70,7 @@ MongoClient.connect(db.url, (err, database) => {
 
     app.listen(port, () => {
         console.log('We are now listening on port: ' + port);
-    })            
+    })
   })
+
+module.exports = app

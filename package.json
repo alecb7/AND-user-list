@@ -4,10 +4,8 @@
   "description": "Simple set of users",
   "main": "src/index.js",
   "scripts": {
-    "test:ci": "karma start karma.config.js --single-run",
-    "test": "karma start karma.config.js ",
-    "start": "webpack",
-    "server": "node server.js"
+    "test": "jest --watchAll",
+    "server": "mongod && node server.js"
   },
   "repository": {
     "type": "git",
