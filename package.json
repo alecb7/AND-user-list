@@ -21,9 +21,9 @@
     "jest": "^21.2.1"
   },
   "dependencies": {
-    "mongodb": "2.2.33",
+    "express": "^4.16.2",
     "jquery": "^3.2.1",
+    "mongodb": "2.2.33",
     "superagent": "^3.6.3"
-
   }
 }
