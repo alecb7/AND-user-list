@@ -33,14 +33,12 @@ let mockData = [
         age: "24",
         nat: "British"
     }, 
-
     {
         userid: 05,
         firstName: "Ina",
         lastName: "Mladenova",
         age: "24", 
         nat: "Bulgarian"
-
     }
 ];
 
