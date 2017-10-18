@@ -10,7 +10,7 @@ test("Users listing returned", done => {
     .set("accept", "json")
     .end((err, res) => {
       expect(res.status).toBe(200);
-      expect(res.body).toEqual(users);
+      expect(res.body[0].firstName).toEqual('Olly');
       done();
     });
 });
