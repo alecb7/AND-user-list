@@ -1,5 +1,5 @@
 node {
-    properties([disableConcurrentBuilds(), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ANDigital/inspect/']])
+    properties([disableConcurrentBuilds(), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/alecb7/AND-user-list/']])
 
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm']) {
         stage ('Clear workspace') {
