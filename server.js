@@ -11,14 +11,15 @@ let mockData = [
   {
     userid: 1,
     firstName: "Olly",
-    lastName: "Nural",
     age: "21",
-    nat: "British"
+    nat: "British",
+    lastName: "Nural"
   },
+  
   {
     userid: 2,
-    firstName: "Graziano",
     lastName: "Statello",
+    firstName: "Graziano",
     age: "30",
     nat: "Italian"
   },
